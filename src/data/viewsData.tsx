@@ -1,4 +1,14 @@
-import { HiOutlineChartPie } from 'react-icons/hi'
+import {
+  HiOutlineChartPie,
+  HiOutlineChatAlt2,
+  HiOutlineUserGroup,
+  HiOutlineCog
+} from 'react-icons/hi'
+
+import ResumeView from '@/components/admin/views/ResumeView'
+import CommentsView from '@/components/admin/views/CommentsView'
+import FollowersView from '@/components/admin/views/FollowersView'
+import SettingsView from '@/components/admin/views/SettingsView'
 
 export const viewsMainMenuData = [
   {
@@ -8,16 +18,25 @@ export const viewsMainMenuData = [
     viewTitle: 'Resumo',
     viewLegend: 'Lorem impsum qua quers koda',
     viewIcon: <HiOutlineChartPie />,
-    viewComponent: <>Resumo</>
+    viewComponent: <ResumeView />
   },
   {
-    viewId: 'view-second',
-    viewPath: 'second',
-    viewLabel: 'View Secundária',
-    viewTitle: 'View Secundária',
+    viewId: 'view-comments',
+    viewPath: 'comments',
+    viewLabel: 'Comentários',
+    viewTitle: 'Gerenciador de Comentários',
     viewLegend: 'Lorem impsum qua quers koda',
-    viewIcon: <HiOutlineChartPie />,
-    viewComponent: <>View Secundária</>
+    viewIcon: <HiOutlineChatAlt2 />,
+    viewComponent: <CommentsView />
+  },
+  {
+    viewId: 'view-followers',
+    viewPath: 'followers',
+    viewLabel: 'Seguidores',
+    viewTitle: 'Gerenciador de Seguidores',
+    viewLegend: 'Lorem impsum qua quers koda',
+    viewIcon: <HiOutlineUserGroup />,
+    viewComponent: <FollowersView />
   }
 ]
 
@@ -28,7 +47,7 @@ export const viewsSecondaryMenuData = [
     viewLabel: 'Configurações',
     viewTitle: 'Configurações',
     viewLegend: 'Lorem impsum qua quers koda',
-    viewIcon: <HiOutlineChartPie />,
-    viewComponent: <>Configurações</>
+    viewIcon: <HiOutlineCog />,
+    viewComponent: <SettingsView />
   }
 ]
